@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Login|LYC</title>
+	<link rel="stylesheet" type="text/css" href="login-01.css">
+</head>
+<body>
+		<h2><input type="button" id="inpt-for-login" class="inpt-for-logres" value="Login">|<input type="button" id="inpt-for-registro" class="inpt-for-logres" value="registrar"></h2>
+		 <div class="login-registro" id="login"> 
+			<form method="post" action="registro_usuarios.php">
+			<fieldset>
+				<label>Email</label>
+				<input type="email" name="email" id="email-user" placeholder="usuario@gmail.com" required><br>
+
+				<label>Senha</label>
+				<input type="password" name="password" id="password-user" placeholder="sua senha" required><br>
+
+				<input type="checkbox" id="S-visivel">
+				<label>Mostrar senha</label><br>
+
+				<a href="#">Esqueci minha Senha</a><br>
+				<input type="submit" class="BLogRes" value="Entrar" onclick="logar()">
+			</fieldset>
+			</form> 
+			
+		</div>
+
+		<div class="login-registro" id="registro">
+			<form method="post" action="registro_usuarios.php">
+				<fieldset>
+					<label>Email:</label>
+					<input type="email" name="email-reg" id="email-user" placeholder="usuario@gmail.com" required><br>
+
+					<label>telefone:</label>
+					<input type="number" name="tel-reg" id="tel-user" placeholder="(xx) xxxx-xxxx"><br>
+
+					<label>Data de nascimento:</label>
+					<input type="Date" name="nasc-reg" id="nasc-user" required><br>
+
+					<label>senha:</label>
+					<input type="password" name="senha-reg" id="senha-user" placeholder="Sua senha" required><br>
+
+					<label>digite sua senha novamente:</label>
+					<input type="password" name="confir-senha" id="senha-confirme-user" placeholder="Confirme sua senha" required><br>
+
+					<input type="submit" class="BLogRes" value="Registrar" onclick="registrar()">
+				</fieldset>
+			</form>
+
+<script type="text/javascript" src="login-01.js"></script>
+</body>
+</html>

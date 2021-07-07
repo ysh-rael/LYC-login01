@@ -1,37 +1,55 @@
+@keyframes deslizar {
+	from {
+		margin-left: -20%;
+	}
+
+	to {
+		margin-left: 0px;
+	}
+ }
+
+
 body {
 
-}
+ }
 
 .login-registro {
 	display: flex;
 	max-width: 200px;
-}
-
+	animation-duration: 600ms;
+	animation-name: deslizar;
+ 
 .BLogRes {
 	display: block;
+	border: none;
 	margin: auto;
-}
+ }
 
 #registro {
-}
+ }
 
 #login {
-}
+ }
 .inpt-for-logres {
 	font-size: 15px;
 	border: none;
 	color: rgb(60,60,60);
-}
+ }
 
 .inpt-for-logres:hover {
 	color: rgb(40,40,40);
 	text-shadow: 1px 1px 1px green;
-}
-.inpt-for-logres:active {
+ }
+.inpt-for-logres:focus {
 	outline: none;
 	color: rgb(40,40,40);
 	text-shadow: 1px 1px 1px lightgreen;
-}
+ }
+
+input {
+	border: none;
+	border-bottom: 1px solid rgb(85, 85, 85);
+ }
 input:focus {
 	outline: none;
-}
+ }

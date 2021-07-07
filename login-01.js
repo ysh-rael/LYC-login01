@@ -5,6 +5,10 @@
 		var inpEmail = window.document.getElementById('email-user')
 		var inpSenha = window.document.getElementById('password-user')
 		var mostrarSenha = window.document.getElementById('S-visivel')
+	//VARIAVEIS REGISTRAR
+		var mostrarSenhaReg = window.document.getElementById('S-visivel-user')
+		var inptSenhaReg = window.document.getElementById('senha-user')
+		var inptSenhaConfirReg = window.document.getElementById('senha-confirme-user')
 	//TORNAR CAIXA VISIVEL
 		var log = window.document.getElementById('inpt-for-login')
 		var caixalogin = window.document.getElementById('login')
@@ -25,6 +29,20 @@
 	}
 	
  })
+
+ //CHECKBOX PARA MOSTRAR SENHA do registro
+ mostrarSenhaReg.addEventListener('click', function() {
+	if (inptSenhaReg.getAttribute('type') == 'password') {
+		inptSenhaReg.setAttribute('type', 'text')
+		inptSenhaConfirReg.setAttribute('type', 'text')
+
+	}else {
+		inptSenhaReg.setAttribute('type', 'password')
+		inptSenhaConfirReg.setAttribute('type', 'password')
+	}
+	
+ })
+
 
 //MOSTRAR CAIXA DE LOGIN OU DE REGISTRO
  log.addEventListener('click', function(){

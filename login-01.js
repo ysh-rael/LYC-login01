@@ -7,8 +7,8 @@
 		var mostrarSenha = window.document.getElementById('S-visivel')
 	//VARIAVEIS REGISTRAR
 		var mostrarSenhaReg = window.document.getElementById('S-visivel-user')
-		var inptSenhaReg = window.document.getElementById('senha-user')
-		var inptSenhaConfirReg = window.document.getElementById('senha-confirme-user')
+		var inptSenhaReg = window.document.getElementById('senha-reg')
+		var inptSenhaConfirReg = window.document.getElementById('senha-confirme-reg')
 	//TORNAR CAIXA VISIVEL
 		var log = window.document.getElementById('inpt-for-login')
 		var caixalogin = window.document.getElementById('login')
@@ -16,6 +16,7 @@
 		var caixaregistrar = window.document.getElementById('registro')
 		caixalogin.style.display = 'none'
 		caixaregistrar.style.display = 'none'
+// log reg borda alternar 
 
 
 	
@@ -77,6 +78,45 @@ function logar() {
 	}else {
 	}
  }
+
+//VARIAVEIS REGISTRAR
+	var emailReg = window.document.getElementById('email-reg')
+	var telReg = window.document.getElementById('tel-reg')
+	var nascReg = window.document.getElementById('nasc-reg')
+	var senhaReg = window.document.getElementById('senha-user')
+	var confirSenhaReg = window.document.getElementById('confir-senha')
+
+
+//MASCARA DE TELEFONE (xx) xxxxx-xxxx
+
+	function mascara(o,f) {
+		v_obj=o
+	    v_fun=f
+		setTimeout("exmascara()",1)
+	 }
+
+	function exmascara() {
+		v_obj.value=v_fun(v_obj.value)
+	 }
+
+	function mtel(v) {
+		v=v.replace(/\D/g,""); //Remove tudo o que não é dígito
+	    v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+	    v=v.replace(/(\d)(\d{4})$/,"$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
+	    return v;
+	 }
+
+	function id( el ){
+		return document.getElementById( el );
+	 }
+
+	/*id(xx).quando apertar e soltar uma tecla  recebe(=) função contendo func. mascara com o parametro esse mtel(this,mtel)*/
+		window.onload = function() {
+			id('tel-reg').onkeyup = function() { 
+				mascara(this, mtel)
+			}
+		 }
+
 
 function registrar() {
 	// body...

@@ -2,18 +2,20 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<title>Login|LYC</title>
+	<title>Login01|LYC</title>
 	<link rel="stylesheet" type="text/css" href="login-01.css">
 </head>
 <body>
-		<h2><input type="button" id="inpt-for-login" class="inpt-for-logres" value="Login">|<input type="button" id="inpt-for-registro" class="inpt-for-logres" value="registrar"></h2>
+		<span><input type="button" id="inpt-for-login" class="inpt-for-logres" value="Login">|<input type="button" id="inpt-for-registro" class="inpt-for-logres" value="registrar"></span>
 		 <div class="login-registro" id="login"> 
 			<form method="post" action="registro_usuarios.php">
 			<fieldset>
-				<label>Email</label>
+				<label>Email</label><br> 
+				<img src="imagens/email-padrao.png" id="email">
 				<input type="email" name="email" id="email-user" placeholder="usuario@gmail.com" required><br>
 
-				<label>Senha</label>
+				<label>Senha</label><br> 
+				<img src="imagens/cadeado.png" id="cadeado">
 				<input type="password" name="password" id="password-user" placeholder="sua senha" required><br>
 
 				<input type="checkbox" id="S-visivel">
@@ -30,19 +32,19 @@
 			<form method="post" action="registro_usuarios.php">
 				<fieldset>
 					<label>Email:</label>
-					<input type="email" name="email-reg" id="email-user" placeholder="usuario@gmail.com" required><br>
+					<input type="email" name="email-reg" id="email-reg" placeholder="usuario@gmail.com" required><br>
 
 					<label>telefone:</label>
-					<input type="number" name="tel-reg" id="tel-user" placeholder="(xx) xxxx-xxxx"><br>
+					<input type="text" name="tel-reg" id="tel-reg" placeholder="(xx) xxxxx-xxxx" maxlength="15" />
 
 					<label>Data de nascimento:</label>
-					<input type="Date" name="nasc-reg" id="nasc-user" required><br>
+					<input type="Date" name="nasc-reg" id="nasc-reg" required><br>
 
 					<label>senha:</label>
-					<input type="password" name="senha-reg" id="senha-user" placeholder="Sua senha" required><br>
+					<input type="password" name="senha-reg" id="senha-reg" placeholder="Sua senha" required><br>
 
 					<label>digite sua senha novamente:</label>
-					<input type="password" name="confir-senha" id="senha-confirme-user" placeholder="Confirme sua senha" required><br>
+					<input type="password" name="confir-senha" id="senha-confirme-reg" placeholder="Confirme sua senha" required><br>
 
 					<input type="checkbox" id="S-visivel-user">
 					<label>Mostrar senha</label><br>
